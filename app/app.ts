@@ -1,21 +1,18 @@
-interface User {
-  name: string;
-  age: number;
-  isActive: true | false;
-}
-
-const userName: string = "Terrence";
-const userAge: number = 33;
-const isActiveOnGithub: boolean = true;
-
-const Terrence: User = {
-  name: userName,
-  age: userAge,
-  isActive: isActiveOnGithub,
+const printID = (id: string | number) => {
+  if (typeof id === "string") {
+    console.log(id.toUpperCase());
+  } else {
+    console.log(id);
+  }
 };
 
-const getUserName = (user: User): string => {
-  return user.name;
+const greetPeople = (users: string[] | string) => {
+  if (Array.isArray(users)) {
+    console.log("Hello, " + users.join(" and "));
+  } else {
+    console.log("Welcome " + users);
+  }
 };
 
-console.log(getUserName(Terrence)); // returns Terrence
+greetPeople(["Eric", "Kevin", "John"]); // returns HEllo, Eric and Kevin and John
+greetPeople("Terrence"); // returns Welcome Terrence
