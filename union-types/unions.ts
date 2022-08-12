@@ -8,14 +8,10 @@ const userName: string = "Terrence";
 const userAge: number = 33;
 const isActiveOnGithub: boolean = true;
 
-const Terrence: User = {
+const Person: User = {
   name: userName,
   age: userAge,
   isActive: isActiveOnGithub,
 };
 
-const getUserName = (user: User): string => {
-  return user.name;
-};
-
-console.log(getUserName(Terrence)); // returns Terrence
+console.log(Person); // returns {name: 'Terrence', age: 33, isActive: true}

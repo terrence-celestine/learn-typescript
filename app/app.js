@@ -1,5 +1,12 @@
+var userName = "Terrence";
+var userAge = 33;
+var isActiveOnGithub = true;
 var Terrence = {
-    name: "Terrence",
-    age: 26
+    name: userName,
+    age: userAge,
+    isActive: isActiveOnGithub
 };
-console.log(Terrence); // returns {name:"Terrence", age: 26}
+var getUserName = function (user) {
+    return user.name;
+};
+console.log(getUserName(Terrence)); // returns Terrence
