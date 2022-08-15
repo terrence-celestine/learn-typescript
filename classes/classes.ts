@@ -1,6 +1,4 @@
 class Department {
-  private readonly id: string;
-  private name: string;
   private employees: string[] = [];
   constructor(private id: string, public name: string) {
     this.name = name;
